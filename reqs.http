@@ -1,0 +1,32 @@
+@server = http://localhost:8080
+@elementos = {{server}}/api/elementos
+@participantes = {{server}}/api/participantes
+@deportes = {{server}}/api/deportes
+@deportistas = {{server}}/api/deportistas
+###
+GET {{elementos}}
+###
+
+POST {{elementos}}
+Content-Type: application/json
+
+{
+    "nombre": "Elemento Nuevo",
+    "categoria": "Categoría Nueva",
+    "descripcion": "Descripción Nueva"
+}
+###
+
+POST {{deportistas}}
+Content-Type: application/json
+
+{
+    "nombre": "Nuevo Deportista"
+}
+###
+
+GET {{participantes}}/1/participante
+###
+
+GET {{deportes}}/1/participantes
+###
