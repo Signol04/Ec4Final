@@ -40841,12 +40841,11 @@ var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react
   RouterProvider = _require.RouterProvider;
 var PageHome = __webpack_require__(/*! ./pages/home */ "./src/main/js/pages/home.js");
 var PageVerDeporte = __webpack_require__(/*! ./pages/ver-deporte */ "./src/main/js/pages/ver-deporte.js");
-var PageNuevoDeporte = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './pages/nuevo-deporte'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 var PageNuevoDeportista = __webpack_require__(/*! ./pages/nuevo-deportista */ "./src/main/js/pages/nuevo-deportista.js");
 var PageEditarDeportista = __webpack_require__(/*! ./pages/editar-deportista */ "./src/main/js/pages/editar-deportista.js");
 var PageEditarDeporte = __webpack_require__(/*! ./pages/editar-deporte */ "./src/main/js/pages/editar-deporte.js");
-var PageVerParticipante = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module './pages/ver-participante'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-var PageNuevoParticipante = __webpack_require__(/*! ./pages/nuevo-participante */ "./src/main/js/pages/nuevo-participante.js");
+var PageVerParticipante = __webpack_require__(/*! ./pages/ver-elemento */ "./src/main/js/pages/ver-elemento.js");
+var PageNuevoElementoDeporte = __webpack_require__(/*! ./pages/nuevo-elemento */ "./src/main/js/pages/nuevo-elemento.js");
 var router = createBrowserRouter([{
   path: '/',
   element: /*#__PURE__*/React.createElement(PageHome, null)
@@ -40854,8 +40853,8 @@ var router = createBrowserRouter([{
   path: '/ver-deporte/:id',
   element: /*#__PURE__*/React.createElement(PageVerDeporte, null)
 }, {
-  path: '/nuevo-deporte',
-  element: /*#__PURE__*/React.createElement(PageNuevoDeporte, null)
+  path: '/nuevo-elemento',
+  element: /*#__PURE__*/React.createElement(PageNuevoElementoDeporte, null)
 }, {
   path: '/nuevo-deportista',
   element: /*#__PURE__*/React.createElement(PageNuevoDeportista, null)
@@ -40869,8 +40868,8 @@ var router = createBrowserRouter([{
   path: '/ver-participante/:id',
   element: /*#__PURE__*/React.createElement(PageVerParticipante, null)
 }, {
-  path: '/ver-participante/:id/nuevo-participante',
-  element: /*#__PURE__*/React.createElement(PageNuevoParticipante, null)
+  path: '/ver-elemento/:id/nuevo-elemento',
+  element: /*#__PURE__*/React.createElement(PageNuevoElementoDeporte, null)
 }]);
 ReactDOM.render( /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(RouterProvider, {
   router: router
@@ -41395,55 +41394,51 @@ var PageNuevoDeportista = function PageNuevoDeportista() {
 
 /***/ }),
 
-/***/ "./src/main/js/pages/nuevo-participante.js":
-/*!*************************************************!*\
-  !*** ./src/main/js/pages/nuevo-participante.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/main/js/pages/nuevo-elemento.js":
+/*!*********************************************!*\
+  !*** ./src/main/js/pages/nuevo-elemento.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
+/* harmony import */ var _client__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_client__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var _require = __webpack_require__(/*! react */ "./node_modules/react/index.js"),
-  useState = _require.useState,
-  useEffect = _require.useEffect;
-var _require2 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
-  Link = _require2.Link,
-  useParams = _require2.useParams;
-var client = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
-var PageNuevoParticipante = function PageNuevoParticipante() {
-  var _useParams = useParams(),
-    id = _useParams.id;
-  var _useState = useState([]),
+
+
+
+var PageNuevoElementoDeporte = function PageNuevoElementoDeporte() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
     _useState2 = _slicedToArray(_useState, 2),
-    deportistas = _useState2[0],
-    setDeportistas = _useState2[1];
-  var _useState3 = useState([]),
+    nombre = _useState2[0],
+    setNombre = _useState2[1];
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
     _useState4 = _slicedToArray(_useState3, 2),
-    elementos = _useState4[0],
-    setElementos = _useState4[1];
-  var _useState5 = useState(''),
+    categoria = _useState4[0],
+    setCategoria = _useState4[1];
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
     _useState6 = _slicedToArray(_useState5, 2),
-    idDeportista = _useState6[0],
-    setIdDeportista = _useState6[1];
-  var _useState7 = useState(''),
-    _useState8 = _slicedToArray(_useState7, 2),
-    idElemento = _useState8[0],
-    setIdElemento = _useState8[1];
+    descripcion = _useState6[0],
+    setDescripcion = _useState6[1];
   var handleSubmit = function handleSubmit(event) {
     event.preventDefault();
-    client({
+    _client__WEBPACK_IMPORTED_MODULE_1___default()({
       method: 'POST',
-      path: '/api/participantes',
+      path: '/api/elementosdeporte',
       entity: {
-        deporte: 'http://localhost:8080/api/deportes/' + id,
-        deportista: 'http://localhost:8080/api/deportistas/' + idDeportista,
-        elemento: 'http://localhost:8080/api/elementos/' + idElemento
+        nombre: nombre,
+        categoria: categoria,
+        descripcion: descripcion
       },
       headers: {
         'Content-Type': 'application/json'
@@ -41452,68 +41447,43 @@ var PageNuevoParticipante = function PageNuevoParticipante() {
       window.location = '/';
     });
   };
-  useEffect(function () {
-    client({
-      method: 'GET',
-      path: '/api/deportistas'
-    }).done(function (response) {
-      var deportistasList = [];
-      response.entity._embedded.deportistas.map(function (deportista) {
-        deportistasList.push({
-          value: deportista._links.self.href.split('/').slice(-1),
-          label: deportista.nombre
-        });
-      });
-      setDeportistas(deportistasList);
-    });
-    client({
-      method: 'GET',
-      path: '/api/elementos'
-    }).done(function (response) {
-      var elementosList = [];
-      response.entity._embedded.elementos.map(function (elemento) {
-        elementosList.push({
-          value: elemento._links.self.href.split('/').slice(-1),
-          label: elemento.nombre
-        });
-      });
-      setElementos(elementosList);
-    });
-  }, []);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Participante"), /*#__PURE__*/React.createElement("form", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Nuevo Elemento de Deporte"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: handleSubmit
-  }, /*#__PURE__*/React.createElement("label", {
-    htmlFor: "deportista"
-  }, "Deportista"), /*#__PURE__*/React.createElement("select", {
-    name: "deportista",
-    id: "deportista",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "nombre"
+  }, "Nombre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    id: "nombre",
+    name: "nombre",
     onChange: function onChange(e) {
-      setIdDeportista(e.target.value);
+      return setNombre(e.target.value);
     }
-  }, deportistas.map(function (deportista) {
-    return /*#__PURE__*/React.createElement("option", {
-      key: deportista.value,
-      value: deportista.value
-    }, deportista.label);
-  })), /*#__PURE__*/React.createElement("label", null, "Elemento"), /*#__PURE__*/React.createElement("select", {
-    name: "elemento",
-    id: "elemento",
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "categoria"
+  }, "Categor\xEDa"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    id: "categoria",
+    name: "categoria",
     onChange: function onChange(e) {
-      setIdElemento(e.target.value);
+      return setCategoria(e.target.value);
     }
-  }, elementos.map(function (elemento) {
-    return /*#__PURE__*/React.createElement("option", {
-      key: elemento.value,
-      value: elemento.value
-    }, elemento.label);
-  })), /*#__PURE__*/React.createElement("input", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "descripcion"
+  }, "Descripci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    cols: 30,
+    id: "descripcion",
+    name: "descripcion",
+    onChange: function onChange(e) {
+      return setDescripcion(e.target.value);
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "submit",
-    value: "Nuevo Participante"
-  })), /*#__PURE__*/React.createElement(Link, {
+    value: "Nuevo Elemento de Deporte"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
     to: "/"
   }, "Volver"));
 };
-module.exports = PageNuevoParticipante;
+/* harmony default export */ __webpack_exports__["default"] = (PageNuevoElementoDeporte);
 
 /***/ }),
 
@@ -41581,6 +41551,50 @@ var PageVerDeporte = function PageVerDeporte() {
   }, "Volver"));
 };
 /* harmony default export */ __webpack_exports__["default"] = (PageVerDeporte);
+
+/***/ }),
+
+/***/ "./src/main/js/pages/ver-elemento.js":
+/*!*******************************************!*\
+  !*** ./src/main/js/pages/ver-elemento.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var client = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
+var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
+  Link = _require.Link,
+  useParams = _require.useParams;
+var _require2 = __webpack_require__(/*! react */ "./node_modules/react/index.js"),
+  useState = _require2.useState,
+  useEffect = _require2.useEffect;
+var PageVerElemento = function PageVerElemento() {
+  var _useParams = useParams(),
+    id = _useParams.id;
+  var _useState = useState({}),
+    _useState2 = _slicedToArray(_useState, 2),
+    elemento = _useState2[0],
+    setElemento = _useState2[1];
+  useEffect(function () {
+    client({
+      method: 'GET',
+      path: '/api/elementos/' + id
+    }).done(function (response) {
+      setElemento(response.entity);
+    });
+  }, []);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Ver Elemento"), /*#__PURE__*/React.createElement("table", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Nombre"), /*#__PURE__*/React.createElement("td", null, elemento.nombre)), /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Categor\xEDa"), /*#__PURE__*/React.createElement("td", null, elemento.categoria)), /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Descripci\xF3n"), /*#__PURE__*/React.createElement("td", null, elemento.descripcion))), /*#__PURE__*/React.createElement(Link, {
+    to: "/"
+  }, "Volver"));
+};
+module.exports = PageVerElemento;
 
 /***/ }),
 

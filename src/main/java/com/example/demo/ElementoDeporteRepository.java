@@ -1,9 +1,8 @@
 package com.example.demo;
 
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@RepositoryRestResource(collectionResourceRel = "elementosdeporte", path = "elementosdeporte")
-public interface ElementoDeporteRepository extends CrudRepository<ElementoDeporte, Long> {
-
+public interface ElementoDeporteRepository extends JpaRepository<ElementoDeporte, Long> {
+    // You don't need to define the save method here; it's already provided by JpaRepository.
 }
+

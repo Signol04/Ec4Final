@@ -4,22 +4,21 @@ const { createBrowserRouter, RouterProvider } = require('react-router-dom');
 
 const PageHome = require('./pages/home');
 const PageVerDeporte = require('./pages/ver-deporte');
-const PageNuevoDeporte = require('./pages/nuevo-deporte');
 const PageNuevoDeportista = require('./pages/nuevo-deportista');
 const PageEditarDeportista = require('./pages/editar-deportista');
 const PageEditarDeporte = require('./pages/editar-deporte');
-const PageVerParticipante = require('./pages/ver-participante');
-const PageNuevoParticipante = require('./pages/nuevo-participante');
+const PageVerParticipante = require('./pages/ver-elemento');
+const PageNuevoElementoDeporte = require('./pages/nuevo-elemento');
 
 const router = createBrowserRouter([
 	{ path: '/', element: <PageHome /> },
 	{ path: '/ver-deporte/:id', element: <PageVerDeporte /> },
-	{ path: '/nuevo-deporte', element: <PageNuevoDeporte /> },
+	{ path: '/nuevo-elemento', element: <PageNuevoElementoDeporte /> },
 	{ path: '/nuevo-deportista', element: <PageNuevoDeportista /> },
 	{ path: '/editar-deportista/:id', element: <PageEditarDeportista /> },
 	{ path: '/editar-deporte/:id', element: <PageEditarDeporte /> },
 	{ path: '/ver-participante/:id', element: <PageVerParticipante /> },
-	{ path: '/ver-participante/:id/nuevo-participante', element: <PageNuevoParticipante /> }
+	{ path: '/ver-elemento/:id/nuevo-elemento', element: <PageNuevoElementoDeporte /> }
 ]);
 
 ReactDOM.render(
