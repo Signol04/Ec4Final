@@ -1,4 +1,4 @@
-@server = https://turbo-garbanzo-56pwjx4rvgr2xxv-8080.app.github.dev
+@server = https://reimagined-goldfish-g4xxp6gq6p5cw695-8080.app.github.dev
 @elementos = {{server}}/api/elementos
 @participantes = {{server}}/api/participantes
 @deportes = {{server}}/api/deportes
