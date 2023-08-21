@@ -41158,44 +41158,42 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "App de Deportes!"), /*#__PURE__*/React.createElement("div", {
-        style: {
-          "width": "100%",
-          "display": "flex"
-        }
+      return /*#__PURE__*/React.createElement("div", {
+        className: "app-container"
+      }, /*#__PURE__*/React.createElement("h1", {
+        className: "app-title"
+      }, "App de Deportes!"), /*#__PURE__*/React.createElement("div", {
+        className: "cards-container"
       }, /*#__PURE__*/React.createElement("div", {
-        style: {
-          "width": "calc(100% / 3)"
-        }
+        className: "card"
       }, /*#__PURE__*/React.createElement(Titulo, {
         entidad: "Deportistas",
         emoji: "\uD83C\uDFC5"
       }), /*#__PURE__*/React.createElement(DeportistaList, {
         deportistas: this.state.deportistas
       }), /*#__PURE__*/React.createElement(Link, {
-        to: "/nuevo-deportista"
+        to: "/nuevo-deportista",
+        className: "btn btn-primary mt-2"
       }, "Nuevo Deportista")), /*#__PURE__*/React.createElement("div", {
-        style: {
-          "width": "calc(100% / 3)"
-        }
+        className: "card"
       }, /*#__PURE__*/React.createElement(Titulo, {
         entidad: "Participantes",
         emoji: "\uD83D\uDC5F"
       }), /*#__PURE__*/React.createElement(ParticipanteList, {
         participantes: this.state.participantes
       }), /*#__PURE__*/React.createElement(Link, {
-        to: "/nuevo-participante"
+        to: "/nuevo-participante",
+        className: "btn btn-primary mt-2"
       }, "Nuevo Participante")), /*#__PURE__*/React.createElement("div", {
-        style: {
-          "width": "calc(100% / 3)"
-        }
+        className: "card"
       }, /*#__PURE__*/React.createElement(Titulo, {
         entidad: "Deportes",
         emoji: "\u26BD"
       }), /*#__PURE__*/React.createElement(DeporteList, {
         deportes: this.state.deportes
       }), /*#__PURE__*/React.createElement(Link, {
-        to: "/nuevo-deporte"
+        to: "/nuevo-deporte",
+        className: "btn btn-primary mt-2"
       }, "Nuevo Deporte"))));
     }
   }]);

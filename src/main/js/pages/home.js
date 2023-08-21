@@ -22,29 +22,29 @@ class PageHome extends React.Component {
 
 	render() {
 		return (
-			<>
-				<h1>App de Deportes!</h1>
+			<div className="app-container">
+				<h1 className="app-title">App de Deportes!</h1>
 
-				<div style={{"width": "100%", "display": "flex"}}>
-					<div style={{"width": "calc(100% / 3)"}}>
+				<div className="cards-container">
+					<div className="card">
 						<Titulo entidad="Deportistas" emoji="🏅" />
 						<DeportistaList deportistas={this.state.deportistas} />
-						<Link to="/nuevo-deportista">Nuevo Deportista</Link>
+						<Link to="/nuevo-deportista" className="btn btn-primary mt-2">Nuevo Deportista</Link>
 					</div>
-					<div style={{"width": "calc(100% / 3)"}}>
+					<div className="card">
 						<Titulo entidad="Participantes" emoji="👟" />
 						<ParticipanteList participantes={this.state.participantes} />
-						<Link to="/nuevo-participante">Nuevo Participante</Link>
+						<Link to="/nuevo-participante" className="btn btn-primary mt-2">Nuevo Participante</Link>
 					</div>
-					<div style={{"width": "calc(100% / 3)"}}>
+					<div className="card">
 						<Titulo entidad="Deportes" emoji="⚽" />
 						<DeporteList deportes={this.state.deportes} />
-						<Link to="/nuevo-deporte">Nuevo Deporte</Link>
+						<Link to="/nuevo-deporte" className="btn btn-primary mt-2">Nuevo Deporte</Link>
 					</div>
 				</div>
-			</>
-		)
-	}
+			</div>
+		);
+		}
 }
 
 const Titulo = (props) => {
